@@ -1,9 +1,9 @@
-#ifndef main.h
-#define main.h
+#ifndef MAIN_H
+#define MAIN_H
 
 /*
- * File: main.h
- * Auth: Jabez kifle
+ * File: main.c
+ * Auth: JABEZ KIFLE
  * Desc: Header file containing declarations for all functions
  *       used in the 0x02-functions_nested_loops directory.
  */
