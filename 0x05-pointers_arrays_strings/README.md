@@ -1,0 +1,1 @@
+pointer arayy and string
