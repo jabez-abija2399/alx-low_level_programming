@@ -1,21 +1,23 @@
+/*
+ * File: 6-puts2.c
+ * Auth: yabets
+ */
+
 #include "main.h"
 
 /**
- * puts2 - function should print only one character out of two
- * starting with the first one
- * @str: input
- * Return: print
+ * puts2 - Prints one char out of two of a string.
+ * @str: The string containing characters.
  */
 void puts2(char *str)
 {
-	int i = 0;
+	int index = 0, len = 0;
 
-	for (; str[i] != '\0'; i++)
-	{
-		if ((i % 2) == 0)
-			_putchar(str[i]);
-		else
-			continue;
-	}
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
 	_putchar('\n');
-
+}
