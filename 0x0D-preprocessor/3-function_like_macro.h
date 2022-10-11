@@ -1,13 +1,19 @@
-#ifndef FUNCTION_LIKE_MACRO_H
-#define FUNCTION_LIKE_MACRO_H
+#include <stdio.h>
+#include "3-function_like_macro.h"
+#include "3-function_like_macro.h"
 
-/*
- * File: 3-function_like_macro.h
- * Auth: yabets
- * Desc: Header file that defines a function-like macro ABS(x)
- *       that computes the absolute value of a number x.
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
  */
+int main(void)
+{
+    int i;
+    int j;
 
-#define ABS(x) ((x) < 0 ? (-x) : (x))
-
-#endif
+    i = ABS(-98) * 10;
+    j = ABS(98) * 10;
+    printf("%d, %d\n", i, j);
+    return (0);
+}
