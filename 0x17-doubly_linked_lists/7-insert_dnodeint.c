@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * _dlistint_len - the number of elements in a linked list_t list
  *
@@ -13,6 +14,7 @@ size_t _dlistint_len(const dlistint_t *h)
 	else
 		return (_dlistint_len(h->next) + 1);
 }
+
 /**
  * _get_nodeint_at_index - the nth node of a listint_t linked list
  *
@@ -32,6 +34,7 @@ dlistint_t *_get_nodeint_at_index(dlistint_t *head, unsigned int index)
 		head = head->next;
 		cLoop++;
 	}
+
 	return (NULL);
 }
 
@@ -48,10 +51,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *before;
 	int length;
+
 	new = _createNode(n);
+
 	if (h == NULL || new == NULL)
 		return (NULL);
+
 	length = _dlistint_len(*h);
+
 	if (idx == 0)
 	{
 		return (add_dnodeint(h, n));
@@ -62,11 +69,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 		before = _get_nodeint_at_index(*h, idx - 1);
+
 	new->prev = before;
 	new->next = before->next;
+
 	if (before->next == NULL)
 		return (add_dnodeint_end(h, n));
 	before->next->prev = new;
 	before->next = new;
+
 	return (new);
 }
