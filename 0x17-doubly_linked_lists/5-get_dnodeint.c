@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * get_dnodeint_at_index - the nth node of a dlistint_t linked list
  *
@@ -10,6 +11,7 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int cLoop = 0;
+
 	while (head != NULL)
 	{
 		if (index == cLoop)
@@ -17,5 +19,6 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		head = head->next;
 		cLoop++;
 	}
+
 	return (NULL);
 }
