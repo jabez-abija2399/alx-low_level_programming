@@ -1,0 +1,28 @@
+# Makefile for school project
+
+# Compiler
+CC := gcc
+
+# Source files
+SRC := main.c foo.c bar.c
+
+# Object files
+OBJ := $(SRC:%.c=%.o)
+
+# Executable name
+NAME := school
+
+# Default rule
+all: $(NAME)
+
+# Build executable
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+# Compile source files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Clean up object files and executable
+clean:
+	rm -f $(OBJ) $(NAME)
